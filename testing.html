@@ -18,23 +18,13 @@
                 a.push(num)
             }
             var myArray=a.slice();
-            var temp;
+            
             // Bubble sort
-            for (var k=1;k<myArray.length;k++)
+            for (var i=0;i<myArray.length-1;i++)
             {
-                for (vat i=0;i<myArray.length-k;i++)
-                {
-                    if(myArray[i]>myArray[i+1])
-                    {
-                        // SWAP them
-                        temp=myArray[i];
-                        myArray[i]=myArray[i+1];
-                        myArray[i+1]=temp;
-
-                    }
-                }
+                var minValue=findMinOfArray(
             }
-           
+            
             
             function findMinOfArray(vector)
             {
