@@ -1,0 +1,51 @@
+<html>
+    <head>
+    
+    </head>
+    <body>
+    
+        <div>
+
+        </div>
+        <script>
+            var a=[];
+            var ELEMENTS=100;
+            var num;
+            for (var i=0;i<ELEMENTS;i++)
+            {
+                % generate a random numbers between 1 and 100
+                var num=Math.floor(Math.random()*ELEMENTS+1);
+                a.push(num)
+            }
+            var myArray=a.slice();
+            
+            // Bubble sort
+            for (var i=0;i<myArray.length-1;i++)
+            {
+                var minValue=findMinOfArray(
+            }
+            
+            
+            function findMinOfArray(vector)
+            {
+                var minV=vector[0];
+                index=0;
+                for (var i=1;i<vector.length;i++)
+                {
+                    if (minV>vector[i])
+                    {
+                        minV=vector[i];
+                        index=i;
+                    }
+                }
+                return minV;
+            }
+        
+            
+        </script>
+    
+    </body>
+
+
+
+</html>
