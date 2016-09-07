@@ -4,35 +4,44 @@
     </head>
     <body>
     
-        <div>
-
-        </div>
+        <div id="input"></div>
+        <div id="output"></div>
         <script>
+            
             var a=[];
-            var ELEMENTS=100;
+            var ELEMENTS=10;
             var num;
             for (var i=0;i<ELEMENTS;i++)
             {
-                % generate a random numbers between 1 and 100
+                % generate a random numbers between 1 and ELEMENTS
                 var num=Math.floor(Math.random()*ELEMENTS+1);
                 a.push(num)
             }
             var myArray=a.slice();
-            var temp;
+            var temp, unsortedArray=null;
+            var result=bubbleSort1(myArray);
+            document.getElementById("input").innerHTML=a;
+            document.getElementById("output").innerHTML=myArray;
+        
             // Bubble sort
-            for (var k=1;k<myArray.length;k++)
+            function bubbleSort1(myArray)
             {
-                for (vat i=0;i<myArray.length-k;i++)
+                for (var k=1;k<myArray.length;k++)
                 {
-                    if(myArray[i]>myArray[i+1])
+                
+                    for (vat i=0;i<myArray.length-k;i++)
                     {
-                        // SWAP them
-                        temp=myArray[i];
-                        myArray[i]=myArray[i+1];
-                        myArray[i+1]=temp;
+                        if(myArray[i]>myArray[i+1])
+                        {
+                            // SWAP them
+                            temp=myArray[i];
+                            myArray[i]=myArray[i+1];
+                            myArray[i+1]=temp;
 
+                        }
                     }
                 }
+                return myArray.slice();
             }
            
             
